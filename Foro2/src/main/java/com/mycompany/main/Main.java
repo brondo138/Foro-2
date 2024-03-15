@@ -7,8 +7,9 @@ import javax.swing.JOptionPane;
 public class Main {
 
     private static ArrayList<String> listaDesktops = new ArrayList<>();
-
+    
     public static void main(String[] args) {
+        
         String[] opciones = {"Registrar equipos", "Ver equipos", "Salir"};
         boolean salir = false;
 
@@ -17,12 +18,22 @@ public class Main {
 
             switch (opcionSeleccionada) {
                 case 0:
-                    // Registrar equipos
-                    Dispositivo.ingresoDatos(listaDesktops);
-                    break;
+                //Dispositivo desktop = new Dispositivo(null, null, null, null, null, null,null);
+                //desktop.ingresoDatos(listaDesktops);
+                    
+                    int tipo = Dispositivo.tipoDispositivo();
+                    Dispositivo.ingresoDatos(tipo);
+                
+                break;
+
                 case 1:
                     // Mostrar equipos
-                    Mostrar.mostrarLista(listaDesktops);
+                    //Mostrar.mostrarLista(listaDesktops);
+                    //Mostrar.mostrarListaL(listaDesktops);
+                    Mostrar.mostrar(listaDesktops);
+                    
+                    
+                    
                     break;
                 case 2:
                     // Salir
@@ -32,11 +43,5 @@ public class Main {
         } while (!salir);
     }
 
-    public static ArrayList<String> getListaDesktops() {
-        return listaDesktops;
     }
 
-    public static void setListaDesktops(ArrayList<String> nuevaListaDesktops) {
-        listaDesktops = nuevaListaDesktops;
-    }
-}

@@ -100,5 +100,18 @@ public class Tablets extends Dispositivo {
         }while(val == false);
         return "";
     }
-    
+
+    public static ArrayList<String> tabletsList(String fabricante, String modelo, String microprocesador, String diag_tam, String cap_res, String nand, String so) {
+        ArrayList<String> listTablets = new ArrayList<>();
+        listTablets.add(fabricante);
+        listTablets.add(modelo);
+        listTablets.add(micro);
+        listTablets.add(tamdiago);
+        listTablets.add(tipo);
+        listTablets.add(nandmem);
+        listTablets.add(opsis);
+        
+        return listTablets;
+        
+   }
 }

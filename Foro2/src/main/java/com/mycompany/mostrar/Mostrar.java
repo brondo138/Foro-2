@@ -38,23 +38,13 @@ public static void mostrarListaL(ArrayList<String> lista) {
             System.out.println();
         }
 }
-
-public static void mostrarListaT(ArrayList<String> lista) {
-    System.out.println("Lista de Tablets:");
-        for (int i = 0; i < lista.size(); i ++) {
-            System.out.println("Fabricante: " + lista.get(i));
-            System.out.println("Modelo: " + lista.get(i + 1));
-            System.out.println("Microprocesador: " + lista.get(i + 2));
-            System.out.println("Tamaño diagonal de pantalla: " + lista.get(i + 3));
-            System.out.println("¿Capacitiva?/¿Resistiva?: " + lista.get(i + 4));
-            System.out.println("Tamaño de memoria NAND: " + lista.get(i + 5));
-            System.out.println("Sistema Operativo: " + lista.get(i + 6);
-            System.out.println();
-        }
-}
     
     public static void mostrar (ArrayList <String> lista){
+        
+        
         ArrayList<String>[] datos = Dispositivo.obtenerDatos();
+        
+        
 
         String[] opciones = {"Desktops", "Laptops", "Tablets"};
 
@@ -67,18 +57,17 @@ public static void mostrarListaT(ArrayList<String> lista) {
         }break;
             case 1:
                  System.out.println("Elementos de finalL:");
-        for (String elemento : datos[1]) {
-            System.out.println(elemento);
-        }
+                for (String elemento : datos[1]) {
+                    System.out.println(elemento);
+                }
                 break;
                 
 
             case 2:
-                System.out.println("Elementos de finalT");
-                for (String elemento : datos[2]){
+                System.out.println("Elementos de finalT:");
+                for (String elemento : datos[2]) {
                     System.out.println(elemento);
                 }
-                // Lógica para Tablets
                 break;
         }
         
@@ -87,3 +76,4 @@ public static void mostrarListaT(ArrayList<String> lista) {
         
     }
 }
+

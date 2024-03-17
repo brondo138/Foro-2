@@ -79,31 +79,7 @@ public class Dispositivo {
         return so;
     }
     
-    /*public static void  ingresoDatos(ArrayList<String> listaDesktops) {
-        String[] opciones = {"Desktops", "Laptops", "Tablets"};
 
-        int opcionSeleccionada = JOptionPane.showOptionDialog(null, "Qué tipo de dispositivo va a agregar:", "Registrar equipo", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
-        switch (opcionSeleccionada) {
-            case 0:
-                // Llamamos a la función desktops de la clase Desktops
-                Desktops desktops = new Desktops();
-                // Aloja las variables en la lista
-                listaDesktops.addAll(Desktops.desktopList(Desktops.getFabricante(), Desktops.getModelo(), Desktops.getMicroprocesador(), Desktops.getMemoriaRam(), Desktops.getTarjetaGrafica(), Desktops.getTamañoTorre(), Desktops.getDiscoDuro()));
-                break;
-
-            case 1:
-                Laptops laptops = new Laptops();
-                listaDesktops.addAll(Laptops.laptopsList(Laptops.getFabricante(), Laptops.getModelo(), Laptops.getMicroprocesador(), Laptops.getMemoriaRam(), Laptops.getTamañoTorre(), Laptops.getDiscoDuro()));
-                break;
-                
-
-            case 2:
-                // Lógica para Tablets
-                break;
-        }
-        
-
-    }*/
     
     public static int tipoDispositivo(){
         String[] opciones = {"Desktops", "Laptops", "Tablets"};

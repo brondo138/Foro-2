@@ -14,6 +14,11 @@ public class Dispositivo {
     protected static String tamañoTorre;
     protected static String discoDuro;
 
+    protected static String diag_tam;
+    protected static String cap_res;
+    protected static String nand;
+    protected static String so;
+
     public Dispositivo(String fabricante, String modelo, String microprocesador, String memoriaRam, String tarjetaGrafica, String tamañoTorre, String discoDuro) {
         this.fabricante = fabricante;
         this.modelo = modelo;
@@ -58,6 +63,20 @@ public class Dispositivo {
 
     public static String getDiscoDuro() {
         return discoDuro;
+    }
+
+    
+    public static String getTamDiagonal(){
+        return diag_tam;
+    }
+    public static String getCapRes(){
+        return cap_res;
+    }
+    public static String getMemoriaNAND(){
+        return nand;
+    }
+    public static String getSistemaOperativo(){
+        return so;
     }
     
     /*public static void  ingresoDatos(ArrayList<String> listaDesktops) {
@@ -109,8 +128,15 @@ public class Dispositivo {
             Laptops laptops = new Laptops();
             // Aloja las variables en la lista
             finalL = laptops.laptopsList(fabricante, modelo, microprocesador, memoriaRam, tamañoTorre, discoDuro);
+                    
+        }
+        if (tipo == 2){
             
-                
+            // Llamamos a la función desktops de la clase Desktops
+            Tablets tablets = new Tablets();
+            // Aloja las variables en la lista
+            finalT = tablets.tabletsList(fabricante, modelo, microprocesador, diag_tam, cap_res, nand, so);  
+            
         }
     }
     

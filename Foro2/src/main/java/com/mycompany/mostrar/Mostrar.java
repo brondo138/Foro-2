@@ -60,6 +60,10 @@ public static void mostrarListaL(ArrayList<String> lista) {
                 
 
             case 2:
+                System.out.println("Elementos de finalT");
+                for (String elemento : datos[2]){
+                    System.out.println(elemento);
+                }
                 // Lógica para Tablets
                 break;
         }

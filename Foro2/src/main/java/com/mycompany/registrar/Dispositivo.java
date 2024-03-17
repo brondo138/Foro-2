@@ -132,7 +132,7 @@ public class Dispositivo {
         }
         if (tipo == 2){
             
-            // Llamamos a la función desktops de la clase Desktops
+            // Llamamos a la función tablets de la clase Tablets
             Tablets tablets = new Tablets();
             // Aloja las variables en la lista
             finalT = tablets.tabletsList(fabricante, modelo, microprocesador, diag_tam, cap_res, nand, so);  
@@ -141,9 +141,10 @@ public class Dispositivo {
     }
     
     public static ArrayList<String>[] obtenerDatos() {
-        ArrayList<String>[] datos = new ArrayList[2]; // Creamos un arreglo de dos ArrayLists
+        ArrayList<String>[] datos = new ArrayList[3]; // Creamos un arreglo de dos ArrayLists
         datos[0] = finalD; // Asignamos finalD al primer elemento del arreglo
         datos[1] = finalL; // Asignamos finalL al segundo elemento del arreglo
+        datos[2] = finalT; // Asignamos finalT al tercer elementon del arreglo
         return datos;
     }
     

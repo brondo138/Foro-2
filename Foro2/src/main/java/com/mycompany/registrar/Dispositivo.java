@@ -141,7 +141,7 @@ public class Dispositivo {
     }
     
     public static ArrayList<String>[] obtenerDatos() {
-        ArrayList<String>[] datos = new ArrayList[3]; // Creamos un arreglo de dos ArrayLists
+        ArrayList<String>[] datos = new ArrayList[3]; // Creamos un arreglo de tres ArrayLists
         datos[0] = finalD; // Asignamos finalD al primer elemento del arreglo
         datos[1] = finalL; // Asignamos finalL al segundo elemento del arreglo
         datos[2] = finalT; // Asignamos finalT al tercer elementon del arreglo

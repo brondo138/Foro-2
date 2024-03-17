@@ -13,8 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Tablets extends Dispositivo {
     public Tablets(){
-        super(obtenerFabricante(), obtenerModelo(), obtenerMicroprocesador(), 
-              obtenerTamDiagonal(), obtenerCapRes(), obtenerMemoriaNAND(), obtenerSistemaOperativo());
+        super(obtenerFabricante(), obtenerModelo(), obtenerMicroprocesador(), obtenerTamDiagonal(), obtenerCapRes(), obtenerMemoriaNAND(), obtenerSistemaOperativo());
     }
 
     private static String obtenerFabricante(){
@@ -77,7 +76,7 @@ public class Tablets extends Dispositivo {
         return "";
     }
     
-    private static Bool obtenerMemoriaNAND(){
+    private static String obtenerMemoriaNAND(){
         boolean val = false;
         do{
         String nandmem = JOptionPane.showInputDialog(null, "Ingresa la memoria NAND de la tablet: ", "Memoria NAND", JOptionPane.PLAIN_MESSAGE).trim();

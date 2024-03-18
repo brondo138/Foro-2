@@ -1,22 +1,22 @@
-package com.mycompany.registrar;
+package Registrar;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Tablets extends Dispositivo {
-    
+
     public Tablets() {
-        super(obtenerFabricante(), obtenerModelo(), obtenerMicroprocesador(), obtenerTamDiagonal(), obtenerCapRes(), obtenerMemoriaNAND(), obtenerSistemaOperativo());
+        super(obtenerFabricante(), obtenerModelo(), obtenerMicroprocesador(), obtenerTamDiagonal(), obtenerCapRes(), obtenerMemoriaNAND(), obtenerSistemaOperativo(), obtenerNothing());
     }
 
     private static String obtenerFabricante() {
         boolean valido = false;
-        String fabricante = "";
+        String dato = "";
         do {
-            fabricante = JOptionPane.showInputDialog(null, "Ingresa el fabricante de la tablet: ", "Fabricante", JOptionPane.PLAIN_MESSAGE).trim();
-            if (fabricante.length() >= 1) {
+            dato = JOptionPane.showInputDialog(null, "Ingresa el fabricante de la tablet: ", "Fabricante", JOptionPane.PLAIN_MESSAGE).trim();
+            if (dato.length() >= 1) {
                 valido = true;
-                return fabricante;
+                return dato;
             } else {
                 JOptionPane.showMessageDialog(null, "Debe ingresar un fabricante", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
@@ -26,12 +26,12 @@ public class Tablets extends Dispositivo {
 
     private static String obtenerModelo() {
         boolean valido = false;
-        String modelo = "";
+        String dato = "";
         do {
-            modelo = JOptionPane.showInputDialog(null, "Ingresa el modelo de la tablet: ", "Modelo", JOptionPane.PLAIN_MESSAGE).trim();
-            if (modelo.length() >= 1) {
+            dato = JOptionPane.showInputDialog(null, "Ingresa el modelo de la tablet: ", "Modelo", JOptionPane.PLAIN_MESSAGE).trim();
+            if (dato.length() >= 1) {
                 valido = true;
-                return modelo;
+                return dato;
             } else {
                 JOptionPane.showMessageDialog(null, "Debe ingresar un modelo", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
@@ -41,12 +41,12 @@ public class Tablets extends Dispositivo {
 
     private static String obtenerMicroprocesador() {
         boolean valido = false;
-        String microprocesador = "";
+        String dato = "";
         do {
-            microprocesador = JOptionPane.showInputDialog(null, "Ingresa el microprocesador de la tablet: ", "Microprocesador", JOptionPane.PLAIN_MESSAGE).trim();
-            if (microprocesador.length() >= 1) {
+            dato = JOptionPane.showInputDialog(null, "Ingresa el microprocesador de la tablet: ", "Microprocesador", JOptionPane.PLAIN_MESSAGE).trim();
+            if (dato.length() >= 1) {
                 valido = true;
-                return microprocesador;
+                return dato;
             } else {
                 JOptionPane.showMessageDialog(null, "Debe ingresar un microprocesador", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
@@ -56,12 +56,12 @@ public class Tablets extends Dispositivo {
 
     private static String obtenerTamDiagonal() {
         boolean valido = false;
-        String diag_tam = "";
+        String dato = "";
         do {
-            tamDiagonal = JOptionPane.showInputDialog(null, "Ingresa el tamaño diagonal de la tablet: ", "Tamaño diagonal", JOptionPane.PLAIN_MESSAGE).trim();
-            if (tamDiagonal.length() >= 1) {
+            dato = JOptionPane.showInputDialog(null, "Ingresa el tamaño diagonal de la tablet: ", "Tamaño diagonal", JOptionPane.PLAIN_MESSAGE).trim();
+            if (dato.length() >= 1) {
                 valido = true;
-                return diag_tam;
+                return dato;
             } else {
                 JOptionPane.showMessageDialog(null, "Debe ingresar un tamaño diagonal", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
@@ -71,12 +71,12 @@ public class Tablets extends Dispositivo {
 
     private static String obtenerCapRes() {
         boolean valido = false;
-        String capRes = "";
+        String dato = "";
         do {
-            capRes = JOptionPane.showInputDialog(null, "Ingresa el tipo de la tablet (capacitiva o resistiva): ", "Tipo", JOptionPane.PLAIN_MESSAGE).trim();
-            if (capRes.length() >= 1) {
+            dato = JOptionPane.showInputDialog(null, "Ingresa el tipo de la tablet (capacitiva o resistiva): ", "Tipo", JOptionPane.PLAIN_MESSAGE).trim();
+            if (dato.length() >= 1) {
                 valido = true;
-                return capRes;
+                return dato;
             } else {
                 JOptionPane.showMessageDialog(null, "Debe ingresar un tipo", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
@@ -86,12 +86,12 @@ public class Tablets extends Dispositivo {
 
     private static String obtenerMemoriaNAND() {
         boolean valido = false;
-        String memoriaNAND = "";
+        String dato = "";
         do {
-            memoriaNAND = JOptionPane.showInputDialog(null, "Ingresa la memoria NAND de la tablet: ", "Memoria NAND", JOptionPane.PLAIN_MESSAGE).trim();
-            if (memoriaNAND.length() >= 1) {
+            dato = JOptionPane.showInputDialog(null, "Ingresa la memoria NAND de la tablet: ", "Memoria NAND", JOptionPane.PLAIN_MESSAGE).trim();
+            if (dato.length() >= 1) {
                 valido = true;
-                return memoriaNAND;
+                return dato;
             } else {
                 JOptionPane.showMessageDialog(null, "Debe ingresar la memoria NAND", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
@@ -101,16 +101,20 @@ public class Tablets extends Dispositivo {
 
     private static String obtenerSistemaOperativo() {
         boolean valido = false;
-        String sistemaOperativo = "";
+        String dato = "";
         do {
-            sistemaOperativo = JOptionPane.showInputDialog(null, "Ingresa el Sistema Operativo de la tablet: ", "Sistema Operativo", JOptionPane.PLAIN_MESSAGE).trim();
-            if (sistemaOperativo.length() >= 1) {
+            dato = JOptionPane.showInputDialog(null, "Ingresa el Sistema Operativo de la tablet: ", "Sistema Operativo", JOptionPane.PLAIN_MESSAGE).trim();
+            if (dato.length() >= 1) {
                 valido = true;
-                return sistemaOperativo;
+                return dato;
             } else {
                 JOptionPane.showMessageDialog(null, "Debe ingresar un Sistema Operativo", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }
         } while (!valido);
+        return "";
+    }
+
+    private static String obtenerNothing(){
         return "";
     }
 
@@ -123,7 +127,7 @@ public class Tablets extends Dispositivo {
         listTablets.add(cap_res);
         listTablets.add(nand);
         listTablets.add(so);
-        
+
         return listTablets;
     }
 }

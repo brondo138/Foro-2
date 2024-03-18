@@ -42,7 +42,7 @@ public class Dispositivo {
     }
 
     //tablets
-    public Dispositivo(String fabricante, String modelo, String microprocesador, String diag_tam, String cap_res, String nand, String so, String nada) {
+    public Dispositivo(String fabricante, String modelo, String microprocesador, String diag_tam, String cap_res, String nand, String so, String nothing) {
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.microprocesador = microprocesador;
